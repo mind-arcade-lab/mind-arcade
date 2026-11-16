@@ -1,0 +1,1 @@
+import{m as e}from"./records-DoshgVEY.js";import{t}from"./symbols-C_Qyd8xE.js";import{t as n}from"./app-fUZiJNFs.js";var r=Object.freeze({symbols:t.createBank({prefix:`symbol-geo-`,collection:`geometric`}).map((t,n)=>({...t,label:e.message(`ui.symbol-value`,n+1)}))});function i(){return n({bank:r.symbols,startLength:1,members:1,outlined:!0})}export{i as mountGame};

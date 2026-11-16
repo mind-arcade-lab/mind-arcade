@@ -1,0 +1,32 @@
+{
+  "name": "mind-arcade",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/export-pages.mjs",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run lint && npm run format:check && npm run build",
+    "db:start": "supabase start --exclude storage-api,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor",
+    "db:lint": "supabase db lint --local --schema public,mind_lab_private --level error --fail-on error"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "parse5": "^8.0.1",
+    "prettier": "^3.9.10",
+    "supabase": "^2.121.0",
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0"
+  },
+  "type": "module"
+}

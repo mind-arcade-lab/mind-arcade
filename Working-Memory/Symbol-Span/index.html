@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN" data-game-id="symbol-span">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f9" />
+    <meta name="description" content="记住抽象图形及其顺序" />
+    <title>抽象符号记忆</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script type="module" crossorigin src="/mind-arcade/assets/symbol-span-SZepI7BI.js"></script>
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/records-DoshgVEY.js">
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/dom-Dh2ICPvY.js">
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/bootstrap-Cmf7mnoy.js">
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/preload-helper-CNfLh5Zf.js">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/bootstrap-bbBnIK_c.css">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/preload-helper-BtxUFnaF.css">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/symbol-span-B0eDA4Xy.css">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/style-By-BvkcQ.css">
+  </head>
+  <body class="symbol-game">
+    <div class="page">
+  <nav class="back-nav"><a class="back-link" href="../../">← <span data-core-text="overview">总览</span></a></nav>
+<header class="site-header">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="11" height="11" rx="3" fill="#625a83"></rect>
+      <rect x="19" y="2" width="11" height="11" rx="3" fill="#52775f"></rect>
+      <rect x="2" y="19" width="11" height="11" rx="3" fill="#6586a0"></rect>
+      <rect x="19" y="19" width="11" height="11" rx="3" fill="#ac8460"></rect>
+    </svg>
+    <h1 data-game-title="">抽象符号记忆</h1>
+  </div>
+  <div class="language-switch" data-language-switch="">
+    <select data-language-select="" aria-label="语言"></select>
+  </div>
+</header>
+
+  <main>
+    <section class="workspace" aria-label="抽象符号记忆练习" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.symbol-span-practice&quot;}">
+      <div class="board-panel">
+        <div class="board-top">
+          <span id="phase-label" class="phase-label" role="status" data-i18n="ui.ready">准备开始</span>
+          <span class="round-label"><span data-i18n="ui.length">长度</span> <strong id="round-length">2</strong></span>
+        </div>
+        <div id="memory-frame" class="memory-frame">
+          <div id="memory-stage" class="memory-stage" aria-label="记忆与作答区" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.study-and-response-area&quot;}">
+            <div id="idle-panel" class="stage-view">
+              <div class="idle-content">
+                <div id="idle-samples" class="idle-samples" aria-hidden="true"></div>
+                <h2 id="idle-title" data-i18n="ui.remember-the-symbols-in-order">记住符号与顺序</h2>
+                <p id="idle-caption">从左到右记住，消失后正序复现</p>
+              </div>
+            </div>
+            <div id="study-panel" class="stage-view" hidden="">
+              <div id="study-content" class="study-grid" aria-label="待记忆的序列" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.sequence-to-remember&quot;}"></div>
+            </div>
+            <div id="recall-panel" class="stage-view" hidden="">
+              <div class="recall-content">
+                <div id="answer-slots" class="answer-slots" aria-label="已回答的顺序" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.your-answers-in-order&quot;}"></div>
+                <div id="answer-pagination" class="sequence-pagination" role="group" aria-label="作答分页" hidden="" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.answer-pages&quot;}">
+                  <button type="button" data-page-step="-1" aria-label="上一页" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.previous-page&quot;}">
+                    ‹
+                  </button>
+                  <span data-page-label="" aria-live="polite"></span>
+                  <button type="button" data-page-step="1" aria-label="下一页" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.next-page&quot;}">
+                    ›
+                  </button>
+                </div>
+                <div id="choices" class="choice-grid" aria-label="候选项" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.choices&quot;}"></div>
+              </div>
+            </div>
+            <div id="result-panel" class="stage-view" hidden="">
+              <div class="result-content">
+                <h2 id="finish-title"></h2>
+                <p id="finish-caption"></p>
+                <div id="correct-answer-label" class="review-label" data-i18n="ui.correct-order-for-this-round">本轮正确顺序</div>
+                <div id="correct-answer" class="correct-answer"></div>
+                <div id="review-pagination" class="sequence-pagination" role="group" aria-label="答案回顾分页" hidden="" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.answer-review-pages&quot;}">
+                  <button type="button" data-page-step="-1" aria-label="上一页" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.previous-page&quot;}">
+                    ‹
+                  </button>
+                  <span data-page-label="" aria-live="polite"></span>
+                  <button type="button" data-page-step="1" aria-label="下一页" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.next-page&quot;}">
+                    ›
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="board-bottom">
+          <span id="board-hint"></span><span id="response-count">0 / 2</span>
+        </div>
+        <div id="progress" class="progress" role="progressbar" aria-label="本轮作答进度" aria-valuemin="0" aria-valuemax="2" aria-valuenow="0" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.answer-progress-for-this-round&quot;}">
+          <span id="progress-fill"></span>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="score-block">
+          <div id="score-label" class="score-label" data-i18n="ui.longest-sequence">最长复现</div>
+          <div class="score">
+            <strong id="score-value">0</strong><span data-i18n="ui.items">项</span>
+          </div>
+          <p id="result-note" class="result-note" aria-live="polite"></p>
+          <button type="button" id="action" class="primary-button">
+            <span id="action-label" data-i18n="ui.start">开始</span><svg id="action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="display-scale-control">
+          <label for="display-scale" data-i18n="ui.display-size">画面大小</label>
+          <input type="range" id="display-scale" min="40" max="100" step="5" value="100" aria-controls="memory-stage" aria-valuetext="100%">
+          <output id="display-scale-value" for="display-scale">100%</output>
+        </div>
+        <form id="settings" class="settings" aria-label="练习设置" data-i18n-attrs="{&quot;aria-label&quot;:&quot;ui.settings&quot;}">
+          <fieldset>
+            <legend data-i18n="ui.recall-order">复现顺序</legend>
+            <div class="segmented">
+              <label><input type="radio" name="order" value="forward" checked=""><span data-i18n="ui.forward">正序</span></label>
+              <label><input type="radio" name="order" value="reverse"><span data-i18n="ui.reverse">倒序</span></label>
+            </div>
+          </fieldset>
+        </form>
+      </aside>
+    </section>
+  </main>
+  <p id="notice" class="notice" role="status" hidden=""></p>
+  <noscript>请启用 JavaScript 后开始练习。 / Enable JavaScript to start practicing.</noscript>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,54 @@
+# Dependencies and generated output
+node_modules/
+_site/
+.generated/
+dist/
+
+# Tests, caches, and logs
+test-results/
+test-results-built/
+playwright-report/
+blob-report/
+coverage/
+.nyc_output/
+.cache/
+.vite/
+.eslintcache
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_ed25519*
+id_rsa*
+id_ecdsa*
+supabase/.temp/
+supabase/.branches/
+
+# Editor and operating system files
+.idea/
+.vscode/
+.codex/
+.agents/
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+
+# Project documentation
+/docs/
+/doc/
+[Rr][Ee][Aa][Dd][Mm][Ee]*
+
+# CI and test files
+/.github/
+/tests/
+/supabase/tests/
+/playwright*.config.js

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN" data-game-id="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f9" />
+    <meta name="description" content="工作记忆、加工速度、注意力与认知控制。" />
+    <title>思维游乐场</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script type="module" crossorigin src="/mind-arcade/assets/index-LmEr7gfB.js"></script>
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/records-DoshgVEY.js">
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/dom-Dh2ICPvY.js">
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/bootstrap-Cmf7mnoy.js">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/bootstrap-bbBnIK_c.css">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/index-BCLFK2Fl.css">
+  </head>
+  <body class="">
+    <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <symbol id="mn-back" viewBox="0 0 64 64">
+      <rect x="6" y="12" width="14" height="14" rx="3" fill="currentColor" fill-opacity=".15" />
+      <circle cx="32" cy="19" r="7" opacity=".45" />
+      <rect x="44" y="12" width="14" height="14" rx="3" fill="currentColor" fill-opacity=".15" />
+      <path d="M51 34v9H13v-9m-5 5 5-5 5 5" />
+      <path d="M25 51h14" opacity=".4" />
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6" />
+    </symbol>
+    <symbol id="sequence" viewBox="0 0 64 64">
+      <g fill="currentColor" stroke="none" opacity=".13">
+        <rect x="7" y="7" width="14" height="14" rx="3" />
+        <rect x="25" y="7" width="14" height="14" rx="3" />
+        <rect x="43" y="7" width="14" height="14" rx="3" />
+        <rect x="7" y="25" width="14" height="14" rx="3" />
+        <rect x="25" y="25" width="14" height="14" rx="3" />
+        <rect x="43" y="25" width="14" height="14" rx="3" />
+        <rect x="7" y="43" width="14" height="14" rx="3" />
+        <rect x="25" y="43" width="14" height="14" rx="3" />
+        <rect x="43" y="43" width="14" height="14" rx="3" />
+      </g>
+      <path d="M14 14h18v18h18" opacity=".4" stroke-dasharray="2 4" />
+      <g fill="currentColor" stroke="none">
+        <rect x="7" y="7" width="14" height="14" rx="3" />
+        <rect x="25" y="25" width="14" height="14" rx="3" opacity=".7" />
+        <rect x="43" y="25" width="14" height="14" rx="3" opacity=".4" />
+      </g>
+    </symbol>
+    <symbol id="letter-number" viewBox="0 0 64 64">
+      <g
+        fill="currentColor"
+        stroke="none"
+        font-family="system-ui, sans-serif"
+        font-weight="600"
+        font-size="17"
+        text-anchor="middle"
+      >
+        <text x="13" y="23" opacity=".6">3</text>
+        <text x="32" y="23" opacity=".6">A</text>
+        <text x="51" y="23" opacity=".6">1</text>
+        <text x="13" y="56">1</text>
+        <text x="32" y="56">3</text>
+        <text x="51" y="56">A</text>
+      </g>
+      <path d="M12 32h40m-5-4 5 4-5 4" opacity=".4" />
+    </symbol>
+    <symbol id="pictures" viewBox="0 0 64 64">
+      <rect x="7" y="8" width="37" height="40" rx="5" opacity=".3" />
+      <rect x="17" y="17" width="40" height="40" rx="5" fill="var(--soft)" />
+      <circle cx="44" cy="28" r="4" fill="currentColor" opacity=".6" stroke="none" />
+      <path d="m22 48 11-14 8 10 5-5 6 9Z" fill="currentColor" opacity=".18" stroke="none" />
+      <path d="m22 48 11-14 8 10 5-5 6 9" />
+    </symbol>
+    <symbol id="symbols" viewBox="0 0 64 64">
+      <path d="m21 7 14 14-14 14L7 21Z" />
+      <path d="M21 13v16m-8-8h16" opacity=".4" />
+      <path d="m43 28 15 26H28Z" fill="currentColor" fill-opacity=".1" />
+      <circle cx="43" cy="44" r="6" />
+      <path d="M11 44v12h12m-12 0 9-9" opacity=".6" />
+    </symbol>
+    <symbol id="symmetry" viewBox="0 0 64 64">
+      <path d="M32 6v52" stroke-dasharray="3 4" opacity=".4" />
+      <g fill="currentColor" stroke="none">
+        <rect x="9" y="12" width="11" height="11" rx="2" />
+        <rect x="20" y="23" width="8" height="11" rx="2" opacity=".55" />
+        <rect x="9" y="34" width="11" height="11" rx="2" />
+        <rect x="44" y="12" width="11" height="11" rx="2" />
+        <rect x="36" y="23" width="8" height="11" rx="2" opacity=".55" />
+        <rect x="44" y="34" width="11" height="11" rx="2" />
+      </g>
+    </symbol>
+    <symbol id="rotation" viewBox="0 0 64 64">
+      <path d="M12 43V17h19M12 29h14" transform="rotate(-20 22 30)" stroke-width="3" />
+      <path d="m35 50 20-20m-12 0h12v12" stroke-width="3" />
+      <path d="m39 57 12-12m-8 0h8v8" opacity=".45" />
+    </symbol>
+    <symbol id="spatial-updating" viewBox="0 0 32 32">
+      <rect x="3" y="3" width="18" height="18" rx="3" opacity=".45" />
+      <path d="M9 3v18M15 3v18M3 9h18M3 15h18" opacity=".3" />
+      <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+      <path d="M23 16h6m-3-3 3 3-3 3M16 25h9v-5" />
+    </symbol>
+    <symbol id="arithmetic-updating" viewBox="0 0 32 32">
+      <rect x="3" y="3" width="16" height="18" rx="3" opacity=".45" />
+      <path d="M8 7h6l-4 10M22 15h8m-4-4v8M16 27h10" />
+    </symbol>
+    <symbol id="multi-stream-running-span" viewBox="0 0 32 32">
+      <path d="M3 9h26M3 23h26" opacity=".25" />
+      <circle cx="8" cy="9" r="3" fill="currentColor" stroke="none" opacity=".3" />
+      <circle cx="19" cy="9" r="3" fill="currentColor" stroke="none" />
+      <circle cx="13" cy="23" r="3" fill="currentColor" stroke="none" />
+      <path d="m25 5 4 4-4 4m0 6 4 4-4 4" />
+    </symbol>
+    <symbol id="search" viewBox="0 0 64 64">
+      <path d="m12 10 7 12H5Z" />
+      <circle cx="35" cy="16" r="6" />
+      <path d="M7 31h50" opacity=".2" />
+      <rect x="7" y="41" width="10" height="10" rx="1" />
+      <circle cx="32" cy="46" r="5" />
+      <path d="m50 39 6 12H44Z" />
+      <circle cx="32" cy="46" r="11" opacity=".45" />
+    </symbol>
+    <symbol id="coding" viewBox="0 0 64 64">
+      <g
+        fill="currentColor"
+        stroke="none"
+        font-family="system-ui, sans-serif"
+        font-size="19"
+        font-weight="600"
+        text-anchor="middle"
+      >
+        <text x="12" y="24">1</text>
+        <text x="32" y="24">2</text>
+        <text x="52" y="24">3</text>
+      </g>
+      <path d="M6 32h52" opacity=".25" />
+      <path d="m12 41 6 12H6Z" />
+      <circle cx="32" cy="47" r="6" />
+      <rect x="46" y="41" width="12" height="12" rx="2" />
+    </symbol>
+    <symbol id="comparison" viewBox="0 0 64 64">
+      <circle cx="12" cy="18" r="6" />
+      <path d="m32 11 7 13H25Z" />
+      <rect x="46" y="12" width="12" height="12" rx="2" />
+      <path d="M6 32h52" opacity=".2" />
+      <circle cx="12" cy="46" r="6" />
+      <path d="m32 39 7 13H25Z" />
+      <path d="m52 38 8 8-8 8-8-8Z" fill="currentColor" fill-opacity=".18" />
+    </symbol>
+    <symbol id="cancellation" viewBox="0 0 64 64">
+      <g opacity=".3">
+        <circle cx="12" cy="12" r="5" />
+        <path d="m32 6 6 11H26Z" />
+        <circle cx="52" cy="12" r="5" />
+        <path d="m12 26 6 11H6Z" />
+        <circle cx="32" cy="32" r="5" />
+        <path d="m52 26 6 11H46Z" />
+        <circle cx="12" cy="52" r="5" />
+        <path d="m32 46 6 11H26Z" />
+        <circle cx="52" cy="52" r="5" />
+      </g>
+      <path d="m7 12 4 4 7-9m9 25 4 4 7-9m9 25 4 4 7-9" stroke-width="2.5" />
+    </symbol>
+    <symbol id="schulte" viewBox="0 0 64 64">
+      <rect x="5" y="5" width="54" height="54" rx="7" opacity=".4" />
+      <path d="M23 5v54M41 5v54M5 23h54M5 41h54" opacity=".2" />
+      <rect
+        x="24"
+        y="24"
+        width="16"
+        height="16"
+        rx="3"
+        fill="currentColor"
+        fill-opacity=".14"
+        stroke="none"
+      />
+      <g
+        fill="currentColor"
+        stroke="none"
+        font-family="system-ui, sans-serif"
+        font-size="12"
+        font-weight="550"
+        text-anchor="middle"
+      >
+        <text x="14" y="19">7</text>
+        <text x="32" y="19">3</text>
+        <text x="50" y="19">5</text>
+        <text x="14" y="37">2</text>
+        <text x="32" y="37">1</text>
+        <text x="50" y="37">9</text>
+        <text x="14" y="55">6</text>
+        <text x="32" y="55">8</text>
+        <text x="50" y="55">4</text>
+      </g>
+    </symbol>
+    <symbol id="tracking" viewBox="0 0 64 64">
+      <path d="M9 35q2-18 17-21M38 54q15-3 17-21" stroke-dasharray="2 4" opacity=".4" />
+      <circle cx="12" cy="43" r="6" fill="currentColor" stroke="none" />
+      <circle cx="42" cy="18" r="6" fill="currentColor" stroke="none" />
+      <g opacity=".4">
+        <circle cx="16" cy="14" r="5" />
+        <circle cx="30" cy="34" r="5" />
+        <circle cx="50" cy="43" r="5" />
+        <circle cx="29" cy="54" r="4" />
+      </g>
+    </symbol>
+    <symbol id="flanker" viewBox="0 0 64 64">
+      <path d="m10 24-6 8 6 8m12-16-6 8 6 8m28-16-6 8 6 8m12-16-6 8 6 8" opacity=".35" />
+      <path d="m28 22 9 10-9 10" stroke-width="3.5" />
+      <path d="M26 51h14" opacity=".35" />
+    </symbol>
+    <symbol id="vigilance" viewBox="0 0 64 64">
+      <path d="M7 33h13l7-17 10 33 7-16h13" stroke-width="3" />
+      <circle cx="32" cy="32" r="27" opacity=".2" />
+    </symbol>
+    <symbol id="go-nogo" viewBox="0 0 64 64">
+      <circle cx="18" cy="22" r="12" fill="currentColor" fill-opacity=".15" />
+      <rect x="36" y="31" width="22" height="22" rx="1" />
+      <path d="m11 23 5 5 9-12" />
+    </symbol>
+    <symbol id="choice" viewBox="0 0 64 64">
+      <path d="M29 18H7m9-9-9 9 9 9M35 46h22m-9-9 9 9-9 9" stroke-width="3" />
+      <path d="m22 48 20-32" opacity=".2" />
+    </symbol>
+    <symbol id="stroop" viewBox="0 0 64 64">
+      <text
+        x="32"
+        y="39"
+        text-anchor="middle"
+        fill="#be5864"
+        stroke="none"
+        font-family="system-ui,sans-serif"
+        font-weight="650"
+        font-size="20"
+        data-i18n="catalog.stroop-icon"
+      >
+        蓝
+      </text>
+      <path d="M16 51h32" opacity=".3" />
+    </symbol>
+  </defs>
+</svg>
+<div class="page">
+<header class="site-header">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="11" height="11" rx="3" fill="#625a83" />
+      <rect x="19" y="2" width="11" height="11" rx="3" fill="#52775f" />
+      <rect x="2" y="19" width="11" height="11" rx="3" fill="#6586a0" />
+      <rect x="19" y="19" width="11" height="11" rx="3" fill="#ac8460" />
+    </svg>
+    <h1 data-game-title>思维游乐场</h1>
+  </div>
+  <div class="language-switch" data-language-switch>
+    <select data-language-select aria-label="语言"></select>
+  </div>
+</header>
+<nav class="filters" aria-label="筛选分类" data-i18n-attrs='{"aria-label":"catalog.filter-by-category"}' hidden><button type="button" data-filter="all" aria-controls="games" aria-pressed="true"><span  data-i18n="game.all-games">全部</span><span class="filter-count">22</span></button><button type="button" data-filter="favorites" aria-controls="games" aria-pressed="false"><span  data-i18n="home.favorites">常用</span></button><button type="button" data-filter="memory" aria-controls="games" aria-pressed="false"><span class="category-dot memory" aria-hidden="true"></span><span  data-i18n="catalog.working-memory">工作记忆</span></button><button type="button" data-filter="speed" aria-controls="games" aria-pressed="false"><span class="category-dot speed" aria-hidden="true"></span><span  data-i18n="catalog.processing-speed">加工速度</span></button><button type="button" data-filter="attention" aria-controls="games" aria-pressed="false"><span class="category-dot attention" aria-hidden="true"></span><span  data-i18n="catalog.attention">注意力</span></button><button type="button" data-filter="control" aria-controls="games" aria-pressed="false"><span class="category-dot control" aria-hidden="true"></span><span  data-i18n="catalog.cognitive-control">认知控制</span></button></nav><p id="filter-status" class="sr-only" role="status" aria-live="polite"></p><main id="games"><section class="category favorites" data-favorites-section hidden><div class="section-heading"><h2 data-i18n="home.favorites">常用</h2></div><div class="cards-viewport"><div class="game-grid" data-favorites-grid></div></div><p class="favorites-empty" data-i18n="home.favorites-empty" hidden>点击星标收藏游戏。</p></section><section class="category memory" data-category="memory" aria-labelledby="memory-title"><div class="section-heading"><h2 id="memory-title" data-i18n="catalog.working-memory">工作记忆</h2><span class="section-count" aria-hidden="true">11</span><span class="category-name" lang="en">Working memory</span></div><div class="cards-viewport" tabindex="0" role="group" aria-labelledby="memory-title"><div class="game-grid"><div class="game-tile memory" data-game="mn-back"><a class="game-card" href="./Working-Memory/MN-Back/" aria-labelledby="mn-back-title" aria-describedby="mn-back-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#mn-back"/></svg></span><div class="card-copy"><h3 id="mn-back-title" data-i18n="mn.title">(M,N)-回溯</h3><p id="mn-back-description" data-i18n="mn.description">同时判断多路刺激是否与 N 步前相同</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="mn-back" aria-pressed="false" aria-label="收藏 (M,N)-回溯" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="sequence-memory"><a class="game-card" href="./Working-Memory/Sequence-Memory/" aria-labelledby="sequence-memory-title" aria-describedby="sequence-memory-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#sequence"/></svg></span><div class="card-copy"><h3 id="sequence-memory-title" data-i18n="ui.sequence-memory">序列记忆</h3><p id="sequence-memory-description" data-i18n="catalog.recall-the-order-of-flashing-squares">记住亮格，按顺序复现</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="sequence-memory" aria-pressed="false" aria-label="收藏 序列记忆" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="letter-number-sequencing"><a class="game-card" href="./Working-Memory/Letter-Number-Sequencing/" aria-labelledby="letter-number-sequencing-title" aria-describedby="letter-number-sequencing-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#letter-number"/></svg></span><div class="card-copy"><h3 id="letter-number-sequencing-title" data-i18n="ui.letter-number-sequencing">字母—数字排序</h3><p id="letter-number-sequencing-description" data-i18n="catalog.remember-then-sort-numbers-and-letters">记住混合序列，再重新排序</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="letter-number-sequencing" aria-pressed="false" aria-label="收藏 字母—数字排序" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="picture-span"><a class="game-card" href="./Working-Memory/Picture-Span/" aria-labelledby="picture-span-title" aria-describedby="picture-span-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#pictures"/></svg></span><div class="card-copy"><h3 id="picture-span-title" data-i18n="ui.picture-span">图片顺序记忆</h3><p id="picture-span-description" data-i18n="catalog.recognize-pictures-and-recall-their-order">辨认图片，复现出现顺序</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="picture-span" aria-pressed="false" aria-label="收藏 图片顺序记忆" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="symbol-span"><a class="game-card" href="./Working-Memory/Symbol-Span/" aria-labelledby="symbol-span-title" aria-describedby="symbol-span-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#symbols"/></svg></span><div class="card-copy"><h3 id="symbol-span-title" data-i18n="ui.symbol-span">抽象符号记忆</h3><p id="symbol-span-description" data-i18n="catalog.remember-abstract-shapes-in-sequence">记住抽象图形及其顺序</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="symbol-span" aria-pressed="false" aria-label="收藏 抽象符号记忆" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="symmetry-span"><a class="game-card" href="./Working-Memory/Symmetry-Span/" aria-labelledby="symmetry-span-title" aria-describedby="symmetry-span-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#symmetry"/></svg></span><div class="card-copy"><h3 id="symmetry-span-title" data-i18n="catalog.symmetry-span-2">对称广度</h3><p id="symmetry-span-description" data-i18n="catalog.judge-symmetry-while-remembering-squares">判断对称，同时记住亮格</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="symmetry-span" aria-pressed="false" aria-label="收藏 对称广度" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="rotation-span"><a class="game-card" href="./Working-Memory/Rotation-Span/" aria-labelledby="rotation-span-title" aria-describedby="rotation-span-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#rotation"/></svg></span><div class="card-copy"><h3 id="rotation-span-title" data-i18n="catalog.rotation-span">旋转广度</h3><p id="rotation-span-description" data-i18n="rules.rotation-intro">判断旋转字符，记住箭头</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="rotation-span" aria-pressed="false" aria-label="收藏 旋转广度" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="symmetry-span-plus-plus"><a class="game-card" href="./Working-Memory/Symmetry-Span-Plus-Plus/" aria-labelledby="symmetry-span-plus-plus-title" aria-describedby="symmetry-span-plus-plus-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#symmetry"/></svg></span><div class="card-copy"><h3 id="symmetry-span-plus-plus-title" data-i18n="catalog.symmetry-span">对称广度++</h3><p id="symmetry-span-plus-plus-description" data-i18n="catalog.combine-flashes-judge-symmetry-recall-locations">合并闪格判断对称，再复现位置</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="symmetry-span-plus-plus" aria-pressed="false" aria-label="收藏 对称广度++" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="spatial-updating"><a class="game-card" href="./Working-Memory/Spatial-Updating/" aria-labelledby="spatial-updating-title" aria-describedby="spatial-updating-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#spatial-updating"/></svg></span><div class="card-copy"><h3 id="spatial-updating-title" data-i18n="catalog.spatial-updating">空间更新</h3><p id="spatial-updating-description" data-i18n="catalog.mentally-move-several-hidden-dots">在脑中移动多个隐藏的圆点</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="spatial-updating" aria-pressed="false" aria-label="收藏 空间更新" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="arithmetic-updating"><a class="game-card" href="./Working-Memory/Arithmetic-Updating/" aria-labelledby="arithmetic-updating-title" aria-describedby="arithmetic-updating-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#arithmetic-updating"/></svg></span><div class="card-copy"><h3 id="arithmetic-updating-title" data-i18n="catalog.arithmetic-updating">数字更新</h3><p id="arithmetic-updating-description" data-i18n="catalog.update-numbers-and-recall-the-final-values">交替更新数字，回忆最终结果</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="arithmetic-updating" aria-pressed="false" aria-label="收藏 数字更新" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile memory" data-game="multi-stream-running-span"><a class="game-card" href="./Working-Memory/Multi-Stream-Running-Span/" aria-labelledby="multi-stream-running-span-title" aria-describedby="multi-stream-running-span-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#multi-stream-running-span"/></svg></span><div class="card-copy"><h3 id="multi-stream-running-span-title" data-i18n="catalog.multi-stream-running-span">多路末尾记忆</h3><p id="multi-stream-running-span-description" data-i18n="catalog.keep-the-latest-digits-in-each-stream">分别记住每一路的末尾数字</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="multi-stream-running-span" aria-pressed="false" aria-label="收藏 多路末尾记忆" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div></div></div></section><section class="category speed" data-category="speed" aria-labelledby="speed-title"><div class="section-heading"><h2 id="speed-title" data-i18n="catalog.processing-speed">加工速度</h2><span class="section-count" aria-hidden="true">5</span><span class="category-name" lang="en">Processing speed</span></div><div class="cards-viewport" tabindex="0" role="group" aria-labelledby="speed-title"><div class="game-grid"><div class="game-tile speed" data-game="symbol-search"><a class="game-card" href="./Processing-Speed/Symbol-Search/" aria-labelledby="symbol-search-title" aria-describedby="symbol-search-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#search"/></svg></span><div class="card-copy"><h3 id="symbol-search-title" data-i18n="ui.symbol-search">符号搜索</h3><p id="symbol-search-description" data-i18n="catalog.decide-whether-a-target-symbol-is-present">快速判断目标符号是否出现</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="symbol-search" aria-pressed="false" aria-label="收藏 符号搜索" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile speed" data-game="digit-symbol-coding"><a class="game-card" href="./Processing-Speed/Digit-Symbol-Coding/" aria-labelledby="digit-symbol-coding-title" aria-describedby="digit-symbol-coding-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#coding"/></svg></span><div class="card-copy"><h3 id="digit-symbol-coding-title" data-i18n="ui.digit-symbol-coding">数字符号编码</h3><p id="digit-symbol-coding-description" data-i18n="catalog.use-the-key-to-match-digits-with-symbols">对照编码表，匹配数字与符号</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="digit-symbol-coding" aria-pressed="false" aria-label="收藏 数字符号编码" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile speed" data-game="pattern-comparison"><a class="game-card" href="./Processing-Speed/Pattern-Comparison/" aria-labelledby="pattern-comparison-title" aria-describedby="pattern-comparison-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#comparison"/></svg></span><div class="card-copy"><h3 id="pattern-comparison-title" data-i18n="ui.pattern-comparison">图形配对比较</h3><p id="pattern-comparison-description" data-i18n="catalog.decide-whether-two-patterns-are-identical">判断两组图案是否完全相同</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="pattern-comparison" aria-pressed="false" aria-label="收藏 图形配对比较" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile speed" data-game="target-cancellation"><a class="game-card" href="./Processing-Speed/Target-Cancellation/" aria-labelledby="target-cancellation-title" aria-describedby="target-cancellation-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#cancellation"/></svg></span><div class="card-copy"><h3 id="target-cancellation-title" data-i18n="ui.target-cancellation">目标划消</h3><p id="target-cancellation-description" data-i18n="catalog.find-every-target-in-a-grid-of-symbols">从图阵中找出所有目标</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="target-cancellation" aria-pressed="false" aria-label="收藏 目标划消" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile speed" data-game="choice-reaction"><a class="game-card" href="./Processing-Speed/Choice-Reaction/" aria-labelledby="choice-reaction-title" aria-describedby="choice-reaction-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#choice"/></svg></span><div class="card-copy"><h3 id="choice-reaction-title" data-i18n="ui.choice-reaction">双选反应</h3><p id="choice-reaction-description" data-i18n="catalog.choose-a-direction-track-speed-and-errors">跟随箭头，快速选择方向</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="choice-reaction" aria-pressed="false" aria-label="收藏 双选反应" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div></div></div></section><section class="category attention" data-category="attention" aria-labelledby="attention-title"><div class="section-heading"><h2 id="attention-title" data-i18n="catalog.attention">注意力</h2><span class="section-count" aria-hidden="true">3</span><span class="category-name" lang="en">Attention</span></div><div class="cards-viewport" tabindex="0" role="group" aria-labelledby="attention-title"><div class="game-grid"><div class="game-tile attention" data-game="schulte-table"><a class="game-card" href="./Attention/Schulte-Table/" aria-labelledby="schulte-table-title" aria-describedby="schulte-table-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#schulte"/></svg></span><div class="card-copy"><h3 id="schulte-table-title" data-i18n="ui.schulte-table">舒尔特方格</h3><p id="schulte-table-description" data-i18n="catalog.find-and-click-numbers-in-order">按数字顺序，尽快点完方格</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="schulte-table" aria-pressed="false" aria-label="收藏 舒尔特方格" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile attention" data-game="multiple-object-tracking"><a class="game-card" href="./Attention/Multiple-Object-Tracking/" aria-labelledby="multiple-object-tracking-title" aria-describedby="multiple-object-tracking-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#tracking"/></svg></span><div class="card-copy"><h3 id="multiple-object-tracking-title" data-i18n="catalog.multiple-object-tracking">多目标追踪</h3><p id="multiple-object-tracking-description" data-i18n="catalog.keep-track-of-targets-as-they-move">持续追踪移动中的目标小球</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="multiple-object-tracking" aria-pressed="false" aria-label="收藏 多目标追踪" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile attention" data-game="psychomotor-vigilance"><a class="game-card" href="./Attention/Psychomotor-Vigilance/" aria-labelledby="psychomotor-vigilance-title" aria-describedby="psychomotor-vigilance-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#vigilance"/></svg></span><div class="card-copy"><h3 id="psychomotor-vigilance-title" data-i18n="ui.psychomotor-vigilance">精神运动警觉</h3><p id="psychomotor-vigilance-description" data-i18n="catalog.respond-as-soon-as-the-counter-appears">等待数字出现，尽快响应</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="psychomotor-vigilance" aria-pressed="false" aria-label="收藏 精神运动警觉" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div></div></div></section><section class="category control" data-category="control" aria-labelledby="control-title"><div class="section-heading"><h2 id="control-title" data-i18n="catalog.cognitive-control">认知控制</h2><span class="section-count" aria-hidden="true">3</span><span class="category-name" lang="en">Cognitive control</span></div><div class="cards-viewport" tabindex="0" role="group" aria-labelledby="control-title"><div class="game-grid"><div class="game-tile control" data-game="flanker"><a class="game-card" href="./Cognitive-Control/Flanker/" aria-labelledby="flanker-title" aria-describedby="flanker-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#flanker"/></svg></span><div class="card-copy"><h3 id="flanker-title" data-i18n="ui.flanker">侧翼干扰</h3><p id="flanker-description" data-i18n="catalog.follow-only-the-center-arrow">忽略两侧，只看中间箭头</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="flanker" aria-pressed="false" aria-label="收藏 侧翼干扰" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile control" data-game="stroop"><a class="game-card" href="./Cognitive-Control/Stroop/" aria-labelledby="stroop-title" aria-describedby="stroop-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#stroop"/></svg></span><div class="card-copy"><h3 id="stroop-title" data-i18n="ui.stroop">Stroop 颜色测试</h3><p id="stroop-description" data-i18n="catalog.stroop-description">忽略字义，判断文字颜色</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="stroop" aria-pressed="false" aria-label="收藏 Stroop 颜色测试" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div><div class="game-tile control" data-game="go-no-go"><a class="game-card" href="./Cognitive-Control/Go-No-Go/" aria-labelledby="go-no-go-title" aria-describedby="go-no-go-description"><span class="icon-tile"><svg class="game-icon" aria-hidden="true"><use href="#go-nogo"/></svg></span><div class="card-copy"><h3 id="go-no-go-title" data-i18n="ui.go-no-go">反应与抑制</h3><p id="go-no-go-description" data-i18n="ui.respond-to-circles-withhold-for-squares">圆形要按，方形不要按</p></div><svg class="card-arrow" aria-hidden="true"><use href="#arrow"/></svg></a><button type="button" class="favorite-button" data-favorite="go-no-go" aria-pressed="false" aria-label="收藏 反应与抑制" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9Z"/></svg></button></div></div></div></section></main></div>
+  </body>
+</html>

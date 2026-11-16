@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/task-c_mQ2pvb.js","assets/records-DoshgVEY.js","assets/core-DMRPHHh9.js","assets/progressive-BHjmWOXQ.js","assets/palette-D43C2Zdq.js","assets/ui-q5sOmgj7.js"])))=>i.map(i=>d[i]);
+import{t as e}from"./bootstrap-Cmf7mnoy.js";/* empty css              */import{n as t,t as n}from"./preload-helper-CNfLh5Zf.js";e();var{mountGame:r}=await n(async()=>{let{mountGame:e}=await import(`./task-c_mQ2pvb.js`);return{mountGame:e}},__vite__mapDeps([0,1,2,3,4,5]));r(),t(),document.documentElement.dataset.ready=`true`;

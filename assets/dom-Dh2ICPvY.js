@@ -1,0 +1,1 @@
+function e(e,t=``,n){let r=document.createElement(e);return t&&(r.className=t),n!==void 0&&(r.textContent=n),r}function t(e,t={},n){let r=document.createElementNS(`http://www.w3.org/2000/svg`,e);for(let[e,n]of Object.entries(t))r.setAttribute(e,String(n));return n!==void 0&&(r.textContent=n),r}export{t as n,e as t};

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN" data-game-id="multiple-object-tracking">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f6f6f9" />
+    <meta name="description" content="持续追踪移动中的目标小球" />
+    <title>多目标追踪</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script type="module" crossorigin src="/mind-arcade/assets/multiple-object-tracking-GQVdsJNQ.js"></script>
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/records-DoshgVEY.js">
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/dom-Dh2ICPvY.js">
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/bootstrap-Cmf7mnoy.js">
+    <link rel="modulepreload" crossorigin href="/mind-arcade/assets/preload-helper-CNfLh5Zf.js">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/bootstrap-bbBnIK_c.css">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/preload-helper-BtxUFnaF.css">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/multiple-object-tracking-C0mrPX0Z.css">
+    <link rel="stylesheet" crossorigin href="/mind-arcade/assets/style-CHVrmE6O.css">
+  </head>
+  <body class="">
+    <div class="page">
+  <nav class="back-nav"><a class="back-link" href="../../">← <span data-core-text="overview">总览</span></a></nav>
+<header class="site-header">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="11" height="11" rx="3" fill="#625a83"></rect>
+      <rect x="19" y="2" width="11" height="11" rx="3" fill="#52775f"></rect>
+      <rect x="2" y="19" width="11" height="11" rx="3" fill="#6586a0"></rect>
+      <rect x="19" y="19" width="11" height="11" rx="3" fill="#ac8460"></rect>
+    </svg>
+    <h1 data-game-title="">多目标追踪</h1>
+  </div>
+  <div class="language-switch" data-language-switch="">
+    <select data-language-select="" aria-label="语言"></select>
+  </div>
+</header>
+
+  <main>
+    <section class="workspace">
+      <div class="board-panel">
+        <div class="board-top">
+          <span id="phase" role="status" data-l10n="ready">准备开始</span><span id="counter"></span>
+        </div>
+        <div id="stage-frame" class="stage-frame"><div id="stage" class="stage"></div></div>
+        <div class="board-bottom">
+          <span id="hint"></span><span id="lives" class="lives" role="img" aria-label="剩余 3 次机会"></span>
+        </div>
+        <div id="toolbar" class="toolbar"></div>
+      </div>
+      <aside class="sidebar">
+        <div class="score-block">
+          <div class="score-label" data-i18n="span.highest-cleared-level">最高通过等级</div>
+          <div class="score">
+            <strong id="score">0</strong><span id="score-unit" data-l10n="levelUnit">级</span>
+          </div>
+          <p id="result-note" aria-live="polite"></p>
+          <button type="button" id="action" class="button primary">
+            <span id="action-label" data-l10n="start">开始</span><svg id="action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="display-scale-control">
+          <label for="display-scale" data-l10n="displayScale">显示大小</label>
+          <input type="range" id="display-scale" min="40" max="100" step="5" value="100" aria-controls="stage" aria-valuetext="100%">
+          <output id="display-scale-value" for="display-scale">100%</output>
+        </div>
+        <details id="help" class="help">
+          <summary data-l10n="how">玩法</summary>
+          <div id="help-content"></div>
+        </details>
+      </aside>
+    </section>
+  </main>
+  <p id="notice" class="notice" role="status" hidden=""></p>
+  <noscript>请启用 JavaScript。 / Please enable JavaScript.</noscript>
+</div>
+
+  </body>
+</html>

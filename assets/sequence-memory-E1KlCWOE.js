@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/app-D09S9bAA.js","assets/records-DoshgVEY.js","assets/core-DMRPHHh9.js"])))=>i.map(i=>d[i]);
+import{t as e}from"./bootstrap-Cmf7mnoy.js";import{n as t,t as n}from"./preload-helper-CNfLh5Zf.js";e();var{mountGame:r}=await n(async()=>{let{mountGame:e}=await import(`./app-D09S9bAA.js`);return{mountGame:e}},__vite__mapDeps([0,1,2]));r(),t(),document.documentElement.dataset.ready=`true`;
